@@ -53,10 +53,8 @@
                     <iframe src="https://0706970-collab.github.io/game-vault/" 
                             style="width:100%;height:100vh;border:none;position:fixed;top:0;left:0">
                     </iframe>`;
-                window.location.href = 'about:blank';
-                window.document.open();
-                window.document.write(iframeHtml);
-                window.document.close();
+                const encoded = encodeURIComponent(iframeHtml);
+                window.location.href = `data:text/html,${encoded}`;
             }
         });
     </script>
